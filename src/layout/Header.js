@@ -12,9 +12,9 @@ class Header extends Component {
                     <button className="logo-btn" onClick={this.showSidebar}></button>
                 </div>
                 <nav className="nav">
-                    <div className="nav-item">About</div>
-                    <div className="nav-item">Signup</div>
-                    <div className="nav-item">Login</div>
+                    <div className="nav-item">Home</div>
+                    <div className="nav-item" onClick={this.props.signupRedirect}>Signup</div>
+                    <div className="nav-item" onClick={this.props.loginRedirect}>Login</div>
                 </nav>
             </header>
         )
