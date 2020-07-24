@@ -9,15 +9,30 @@ import Sidebar from './layout/Sidebar';
 // Components
 import Signup from './components/Signup';
 import Login from './components/Login';
+import Home from './components/Home';
 
 class App extends Component {
   state = {
+    home: false,
     signup: false,
-    login: true
+    login: true,
+    username: '',
+    password: ''
+  }
+  // 7/23/2020 need to remove state from login component and added to app.js
+  // username and password needed in state inside app so it can be accessed by header.js and login.js
+  
+  homeEventHandler = () => {
+    this.setState({
+      home: true,
+      signup: false,
+      login: false
+    })
   }
 
   signupEventHandler = () => {
     this.setState({
+      home: false,
       signup: true,
       login: false
     })
@@ -25,13 +40,18 @@ class App extends Component {
 
   loginEventHandler = () => {
     this.setState({
+      home: false,
       signup: false,
       login: true
     })
   }
   render(){
+    let home;
     let signup;
     let login;
+    if(this.state.home){
+      home = <Home/>
+    }
     if(this.state.signup){
       signup = <Signup/>
     }
@@ -40,8 +60,12 @@ class App extends Component {
     }
     return(
       <div className="container">
-        <Header signupRedirect={this.signupEventHandler} loginRedirect={this.loginEventHandler}/>
+        <Header 
+          signupRedirect={this.signupEventHandler} 
+          loginRedirect={this.loginEventHandler}
+          homeRedirect={this.homeEventHandler}/>
         <Sidebar/>
+        {home}
         {signup}
         {login}
         <Footer/>

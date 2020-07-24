@@ -82,6 +82,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; }
+    .nav-item_signup {
+      display: none; }
+    .nav-item_login {
+      display: none; }
+    .nav-item_profile {
+      display: none; }
+    .nav-item_logout {
+      display: none; }
     .nav-item:hover {
       background: rgba(184, 241, 255, 0.1);
       color: black;
