@@ -1,11 +1,11 @@
 import React, {Component} from "react";
-import Clock from './clock';
+import Counter from './counter';
 
 class Home extends Component {
     render(){
         return(
             <div id="home" className="home">
-                <Clock/>
+                <Counter/>
             </div>
         )
     }
