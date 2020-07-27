@@ -5,10 +5,10 @@ class Sidebar extends Component{
         return(
             <div id="sidebar" className="sidebar">
                 <nav className="sidebar--nav">
-                    <a href="#" className="sidebar--item">Profile</a>
-                    <a href="#" className="sidebar--item">Dashboard</a>
-                    <a href="#" className="sidebar--item">Items</a>
-                    <a href="#" className="sidebar--item">Settings</a>
+                    <span className="sidebar--item">Profile</span>
+                    <span className="sidebar--item">Dashboard</span>
+                    <span className="sidebar--item">Items</span>
+                    <span className="sidebar--item">Settings</span>
                 </nav>
             </div>
         )

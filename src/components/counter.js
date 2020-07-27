@@ -68,10 +68,10 @@ class Counter extends Component{
         }, 1000);
         
         this.intervalID = setInterval(() => {
-            if(this.state.futureDate != "" && this.state.futureTime != ""){
+            if(this.state.futureDate !== "" && this.state.futureTime !== ""){
                 this.countdown()
             }
-            }, 1000);
+        }, 1000);
     }
 
     componentWillUnmount(){
