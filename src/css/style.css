@@ -35,7 +35,12 @@ body {
   width: 25rem;
   height: 4.5rem;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .2s; }
+  .btn-1:hover {
+    transform: translateY(-5px); }
+  .btn-1:active, .btn-1:focus {
+    transform: translateY(-1px); }
 
 .input {
   padding: 1rem;
@@ -65,12 +70,7 @@ body {
     outline: none;
     border-radius: 100px;
     justify-self: center;
-    font-size: 3rem;
-    transition: all .2s; }
-    .counter--btn:hover {
-      transform: translateY(-5px); }
-    .counter--btn:active, .counter--btn:focus {
-      transform: translateY(-1px); }
+    font-size: 3rem; }
 
 .header {
   background: rgba(51, 51, 51, 0.6);
