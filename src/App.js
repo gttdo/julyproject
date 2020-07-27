@@ -13,15 +13,15 @@ import Home from './components/Home';
 
 class App extends Component {
   state = {
-    home: false,
+    home: true,
     signup: false,
-    login: true,
+    login: false,
     username: '',
     password: ''
   }
   // 7/23/2020 need to remove state from login component and added to app.js
   // username and password needed in state inside app so it can be accessed by header.js and login.js
-  
+
   homeEventHandler = () => {
     this.setState({
       home: true,
